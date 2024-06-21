@@ -183,3 +183,22 @@ int main()
 }
 
 (d) Palindron Number
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Enter Any Number: ");
+    scanf("%d", &num);
+    int revserNumber;
+    for (int i = num; i>0; i/=10){
+        int remander = i%10;
+        revserNumber = revserNumber * 10 + remander;
+    }
+    if (revserNumber == num){
+        printf("%d is Palimdrome Number.", num);
+    } else {
+        ("%d is not a Palimdrome Number.", num);
+    }
+}
