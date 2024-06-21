@@ -1,0 +1,185 @@
+Ans1 .int main()
+{
+    int n;
+    printf("Please Enter  Any Number: ");
+    scanf("%d", &n);
+    if(n>0){
+        printf("Positive Number");
+    } else if (n < 0){
+        printf("Negative Number");
+    } else {
+        printf("Zero");
+    }
+
+    return 0;
+}
+
+Ans2. #include <stdio.h>
+
+int main()
+{
+    char anyCh;
+    printf("Enter Any Charecter: ");
+    scanf("%c", &anyCh);
+    if (anyCh == 'a' || anyCh == 'e' || anyCh == 'i' || anyCh == 'o' || anyCh == 'u' ){
+        printf("Vowel");
+    } else {
+        printf("Consonant");
+    }
+    return 0;
+}
+
+Ans3. 
+
+Ans4. #include <stdio.h>
+
+int main()
+{
+    char gender;
+    printf("Please Enter the Gender First Charecter: ");
+    scanf("%c", & gender);
+    if (gender == 'm' || gender == 'M'){
+        printf("You are Male");
+    } else if (gender == 'f' || gender == 'F'){
+        printf("You are Female");
+    } else {
+        printf("Other");
+    }
+    return 0;
+}
+
+Ans5. #include <stdio.h>
+
+int main()
+{
+    int day;
+    printf("Enter the Day of Week: ");
+    scanf("%i", & day);
+    if (day == 1){
+        printf("Sunday");
+    } else if (day == 2){
+        printf("Monday");
+    } else if (day == 3){
+        printf("Tuesday");
+    } else if (day == 4){
+        printf("Wednesday");
+    } else if (day == 5){
+        printf("Thrusday");
+    } else if (day == 6){
+        printf("Friday");
+    } else if (day == 7){
+        printf("Saturday");
+    } else {
+        printf("Sunday");
+    }
+    return 0;
+}
+
+Ans6. #include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Enter Any Number: ");
+    scanf("%d", &num);
+    if (num%2==0){
+        printf("Even Number");
+    } else {
+        printf("Odd Number");
+    }
+    return 0;
+}
+
+Ans7. #include <stdio.h>
+
+int main()
+{
+    for(int i= 1; i<= 100; i++){
+        if (i%2==0){
+            printf("%d ", i);
+        }
+    }
+}
+
+Ans8.#include <stdio.h>
+
+int main()
+{
+    for(int i= 35; i< 67; i++){
+        printf("%d ", i);
+    }
+}
+
+Ans9.#include <stdio.h>
+
+int main()
+{
+    int num1, num2;
+    printf("Enter Number 1: ");
+    scanf("%d",&num1);
+    printf("Enter Number 2: ");
+    scanf("%d", &num2);
+    for (int i=num1; i<= num2; i++){
+        if (i%2 == 0){
+            printf("%d ",i);
+        }
+    }
+}
+
+Ans10. (a) Armstrong Number 
+#include <stdio.h>
+
+int main()
+{
+    int num, sumOfCubeOfDigit = 0;
+    printf("Enter Armstrong Number: ");
+    scanf("%d", &num);
+    for(int i=num; i>0; i = i / 10){
+        int lastDigit = i%10;
+        sumOfCubeOfDigit += (lastDigit * lastDigit * lastDigit);
+    }
+    if (num == sumOfCubeOfDigit){
+        printf("Armstrong Number");
+    } else {
+        printf("Not a Armstrong Number");
+    }
+}
+
+(b) Sum of Digits
+#include <stdio.h>
+
+int main()
+{
+   int num;
+    int sumOfDigit = 0;
+    printf("Enter Any Number: ");
+    scanf("%d", &num);
+    for(int i=num; i>0; i = i / 10){
+        int lastDigit = i%10;
+        sumOfDigit = sumOfDigit + lastDigit;
+    }
+    printf("The Sum of Digit is %d", sumOfDigit);
+}
+
+(c) Neon Number 
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Enter Nion Number: ");
+    scanf("%d", &num);
+    int squareOfNumber = num * num;
+    int sumOfSquareDigit;
+    for (int i = squareOfNumber; i>0; i /=10){
+        int lastDigit = i%10;
+        sumOfSquareDigit += lastDigit;
+    }
+    if (sumOfSquareDigit == num){
+        printf("%d is Neon Number", num);
+    } else {
+        printf("%d is not Neon Number", num);
+    }
+}
+
+(d) Palindron Number
